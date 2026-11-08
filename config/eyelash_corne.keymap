@@ -18,6 +18,42 @@
 
 / {
     behaviors {
+
+        hml: home_row_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <
+                7 8 9 10 11 12
+                22 23 24 25 26 27
+                36 37 38 39 40 41
+                45 46 47
+            >;
+            hold-trigger-on-release;
+        };
+
+
+        hmr: home_row_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <
+                0 1 2 3 4 5
+                13 14 15 16 17 18
+                28 29 30 31 32 33
+                42 43 44 
+            >;
+            hold-trigger-on-release;
+        };
+
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -58,7 +94,7 @@
             display-name = "Base";
             bindings = <
 &kp TAB    &kp Q         &kp W         &kp E          &kp R          &kp T                        &none         &kp Y        &kp U          &kp I          &kp O           &kp P           &kp BSPC
-&kp LSHFT  &u_mt LGUI A  &u_mt LALT S  &u_mt LCTRL D  &u_mt LSHFT F  &kp G                 &none  &none  &none  &kp H        &u_mt LSHFT J  &u_mt LCTRL K  &u_mt LALT L    &u_mt LGUI SQT  &kp SQT
+&kp LSHFT  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                 &none  &none  &none  &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L    &hmr LGUI SQT  &kp SQT
 &kp LCTRL  &u_lt 3 Z     &u_mt RALT X  &kp C          &kp V          &kp B        &none           &none         &kp N        &kp M          &kp COMMA      &u_mt RALT DOT  &u_lt 3 SLASH   &kp ESC
                                        &u_lt 4 ESC    &u_lt 1 SPACE  &u_lt 2 TAB                                &u_lt 6 RET  &u_lt 5 BSPC   &u_lt 7 DEL
             >;
@@ -154,7 +190,7 @@
             display-name = "Extra";
             bindings = <
 &kp TAB    &kp Q         &kp W         &kp E          &kp R          &kp T                        &none         &kp Y        &kp U          &kp I          &kp O           &kp P           &kp BSPC
-&kp LSHFT  &u_mt LGUI A  &u_mt LALT S  &u_mt LCTRL D  &u_mt LSHFT F  &kp G                 &none  &none  &none  &kp H        &u_mt LSHFT J  &u_mt LCTRL K  &u_mt LALT L    &u_mt LGUI SQT  &kp SQT
+&kp LSHFT  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                 &none  &none  &none  &kp H        &hmr LSHFT J  &hmr LCTRL K  &hmr LALT L    &hmr LGUI SQT  &kp SQT
 &kp LCTRL  &u_lt 3 Z     &u_mt RALT X  &kp C          &kp V          &kp B        &none           &none         &kp N        &kp M          &kp COMMA      &u_mt RALT DOT  &u_lt 3 SLASH   &kp ESC
                                        &u_lt 4 ESC    &u_lt 1 SPACE  &u_lt 2 TAB                                &u_lt 6 RET  &u_lt 5 BSPC   &u_lt 7 DEL
             >;
@@ -439,7 +475,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
 
