@@ -57,10 +57,10 @@
         BASE {
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q         &kp W         &kp E          &kp R          &kp T                        &none         &kp Y        &kp U          &kp I          &kp O           &kp P           &kp BSPC
-&kp LSHFT  &u_mt LCTRL A  &u_mt LALT S  &u_mt LGUI D  &u_mt LSHFT F  &kp G  &none  &none  &none  &kp H  &u_mt LSHFT J  &u_mt LGUI K  &u_mt LALT L  &u_mt LCTRL SQT  &kp SQT
-&kp LCTRL  &u_lt 3 Z     &u_mt RALT X  &kp C          &kp V          &kp B        &none           &none         &kp N        &kp M          &kp COMMA      &u_mt RALT DOT  &u_lt 3 SLASH   &kp ESC
-                                       &u_lt 4 ESC    &u_lt 1 SPACE  &u_lt 2 TAB                                &u_lt 6 RET  &u_lt 5 BSPC   &u_lt 7 DEL
+&kp TAB    &kp Q          &kp W         &kp E         &kp R          &kp T                                     &msc SCRL_UP                     &kp Y        &kp U          &kp I         &kp O           &kp P            &kp BSPC
+&kp LSHFT  &u_mt LCTRL A  &u_mt LALT S  &u_mt LGUI D  &u_mt LSHFT F  &kp G                     &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &kp H        &u_mt LSHFT J  &u_mt LGUI K  &u_mt LALT L    &u_mt LCTRL SQT  &kp SQT
+&kp LCTRL  &u_lt 3 Z      &u_mt RALT X  &kp C         &kp V          &kp B        &kp SPACE                    &msc SCRL_DOWN                   &kp N        &kp M          &kp COMMA     &u_mt RALT DOT  &u_lt 3 SLASH    &kp ESC
+                                        &u_lt 4 ESC   &u_lt 1 SPACE  &u_lt 2 TAB                                                                &u_lt 6 RET  &u_lt 5 BSPC   &u_lt 7 DEL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -69,10 +69,10 @@
         NAV {
             display-name = "Nav";
             bindings = <
-&kp TAB    &bootloader  &u_to_U_TAP  &u_to_U_EXTRA  &u_to_U_BASE  &none                  &none         &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &kp BSPC
-&kp LSHFT  &kp LGUI     &kp LALT     &kp LCTRL      &kp LSHFT     &none           &none  &none  &none  &u_caps_word   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT
-&kp LCTRL  &none        &kp RALT     &u_to_U_NUM    &u_to_U_NAV   &none  &none           &none         &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp ESC
-                                     &none          &none         &none                                &kp RET        &kp BSPC   &kp DEL
+&kp TAB    &bootloader  &u_to_U_TAP  &u_to_U_EXTRA  &u_to_U_BASE  &none                           &mmv MOVE_UP                     &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)  &kp BSPC
+&kp LSHFT  &kp LGUI     &kp LALT     &kp LCTRL      &kp LSHFT     &none           &mmv MOVE_LEFT  &none           &mmv MOVE_RIGHT  &u_caps_word   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT
+&kp LCTRL  &none        &kp RALT     &u_to_U_NUM    &u_to_U_NAV   &none  &none                    &mmv MOVE_DOWN                   &kp INS        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp ESC
+                                     &none          &none         &none                                                            &kp RET        &kp BSPC   &kp DEL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -105,10 +105,10 @@
         MEDIA {
             display-name = "Media";
             bindings = <
-&kp TAB    &bootloader  &u_to_U_TAP  &u_to_U_EXTRA  &u_to_U_BASE   &none                  &none         &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &kp BSPC
-&kp LSHFT  &kp LGUI     &kp LALT     &kp LCTRL      &kp LSHFT      &none           &none  &none  &none  &ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &kp SQT
-&kp LCTRL  &none        &kp RALT     &u_to_U_FUN    &u_to_U_MEDIA  &none  &none           &none         &u_out_tog         &u_bt_sel_0      &u_bt_sel_1      &u_bt_sel_2      &u_bt_sel_3      &kp ESC
-                                     &none          &none          &none                                &kp C_STOP         &kp C_PP         &kp C_MUTE
+&trans  &trans       &trans       &kp C_BRI_DN  &kp C_BRI_UP  &rgb_ug RGB_TOG                  &none         &rgb_ug RGB_TOG    &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &kp BSPC
+&trans  &kp LGUI     &kp LALT     &kp LCTRL     &kp LSHFT     &none                     &none  &none  &none  &ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       &kp SQT
+&trans  &u_bt_sel_3  &u_bt_sel_2  &u_bt_sel_1   &u_bt_sel_0   &out OUT_TOG     &none           &none         &u_out_tog         &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &kp ESC
+                                  &none         &none         &none                                          &kp C_STOP         &kp C_PP         &kp C_MUTE
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -119,7 +119,7 @@
             bindings = <
 &kp TAB    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT                   &none         &none  &u_to_U_BASE  &u_to_U_EXTRA  &u_to_U_TAP  &bootloader  &kp BSPC
 &kp LSHFT  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL           &none  &none  &none  &none  &kp LSHFT     &kp LCTRL      &kp LALT     &kp LGUI     &kp SQT
-&kp LCTRL  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH   &none           &none         &none  &u_to_U_NUM   &u_to_U_NAV    &kp RALT     &none        &kp ESC
+&kp LCTRL  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH   &none           &none         &none  &kp CAPSLOCK  &u_to_U_NAV    &kp RALT     &none        &kp ESC
                               &kp DOT  &kp N0  &kp MINUS                                &none  &none         &none
             >;
 
@@ -153,10 +153,10 @@
         EXTRA {
             display-name = "Extra";
             bindings = <
-&kp TAB    &kp Q         &kp W         &kp E          &kp R          &kp T                        &none         &kp Y        &kp U          &kp I          &kp O           &kp P           &kp BSPC
-&kp LSHFT  &u_mt LCTRL A  &u_mt LALT S  &u_mt LGUI D  &u_mt LSHFT F  &kp G  &none  &none  &none  &kp H  &u_mt LSHFT J  &u_mt LGUI K  &u_mt LALT L  &u_mt LCTRL SQT  &kp SQT
-&kp LCTRL  &u_lt 3 Z     &u_mt RALT X  &kp C          &kp V          &kp B        &none           &none         &kp N        &kp M          &kp COMMA      &u_mt RALT DOT  &u_lt 3 SLASH   &kp ESC
-                                       &u_lt 4 ESC    &u_lt 1 SPACE  &u_lt 2 TAB                                &u_lt 6 RET  &u_lt 5 BSPC   &u_lt 7 DEL
+&kp TAB    &kp Q          &kp W         &kp E         &kp R          &kp T                        &none         &kp Y        &kp U          &kp I         &kp O           &kp P            &kp BSPC
+&kp LSHFT  &u_mt LCTRL A  &u_mt LALT S  &u_mt LGUI D  &u_mt LSHFT F  &kp G                 &none  &none  &none  &kp H        &u_mt LSHFT J  &u_mt LGUI K  &u_mt LALT L    &u_mt LCTRL SQT  &kp SQT
+&kp LCTRL  &u_lt 3 Z      &u_mt RALT X  &kp C         &kp V          &kp B        &none           &none         &kp N        &kp M          &kp COMMA     &u_mt RALT DOT  &u_lt 3 SLASH    &kp ESC
+                                        &u_lt 4 ESC   &u_lt 1 SPACE  &u_lt 2 TAB                                &u_lt 6 RET  &u_lt 5 BSPC   &u_lt 7 DEL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
